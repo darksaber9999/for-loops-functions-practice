@@ -1,14 +1,17 @@
-
 // EXERCISE 3
 // Return the average value for the given array of numbers, f.i.
 // getAverage([22, 45, 4, 65]) => 34
 
 export function getAverage(array) {
   // Your code goes here...
+  let runningTotal = 0;
 
+  for (const num of array) {
+    runningTotal += num;
+  }
+
+  return runningTotal / array.length;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-3"
