@@ -5,7 +5,13 @@
 
 export function findMinValueInArray(array) {
   // Your code goes here...
-
+  let min = array[0];
+  for (const num of array) {
+    if (num < min) {
+      min = num;
+    }
+  }
+  return min;
 }
 
 export function findMaxValueInArray(array) {
