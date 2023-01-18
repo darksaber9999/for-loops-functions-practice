@@ -5,7 +5,23 @@
 
 export function getAllWithdrawals(array) {
   // Your code goes here...
+  const results = [];
 
+  for (const client of array) {
+    if (client.withdrawals) {
+      let tempRunningTotal = 0;
+
+      for (const amount of client.withdrawals) {
+        tempRunningTotal += amount;
+      }
+
+      results.push(tempRunningTotal);
+    } else {
+      results.push(0);
+    }
+  }
+
+  return results;
 }
 
 // === TEST YOURSELF ===
