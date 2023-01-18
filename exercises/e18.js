@@ -1,4 +1,3 @@
-
 // EXERCISE 18
 // Please, read the exercise-info/join.md to get the initial data of what is the expected result of this exercise.
 // Array example: joinToStringData in /data/data.js
@@ -7,10 +6,16 @@
 
 export function joinToString(array, separator) {
   // Your code goes here...
+  let resultString = array[0];
 
+  for (let i = 1; i < array.length - 1; i++) {
+    resultString = `${resultString}${separator}${array[i]}`;
+  }
+
+  resultString += array[array.length - 1];
+
+  return resultString;
 }
-
-
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-18"
